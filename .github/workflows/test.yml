@@ -11,6 +11,8 @@ jobs:
       - name: Run Witcher API test
         uses: getjoystick/witcher-action@v0.1.0-prerelease.4
         with:
-          source: joystick
-          apiKey: ${{ secrets.API_TEST_JOYSTICK_API_KEY }}
-          configId: "joystick-setup-dev1-minimum"
+          source: local
+          localFilePath: "test/success/root-jsonplaceholder.json"
+          #apiKey: ${{ secrets.API_TEST_JOYSTICK_API_KEY }}
+          #configId: "joystick-setup-dev1-minimum"
+          
