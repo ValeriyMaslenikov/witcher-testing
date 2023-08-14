@@ -13,6 +13,4 @@ jobs:
         with:
           source: joystick
           apiKey: ${{ secrets.API_TEST_JOYSTICK_API_KEY }}
-          configId: "root-config-id"
-          # Specifying `secretJson` is optional, read `witcher` documentation for more info
-          secretJson: ${{ secrets.API_TEST_SECRETS_JSON }}
+          configId: "joystick-setup-dev1-minimum"
