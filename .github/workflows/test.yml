@@ -8,12 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     name: API test
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: Run Witcher API test
-        uses: getjoystick/witcher-action@v0.1.0-prerelease.4
+        uses: getjoystick/witcher-action@v0.1
         with:
-          source: local
-          localConfigPath: ./test/success/root-jsonplaceholder.json
+          source: joystick
+          apiKey: ${{ secrets.API_TEST_JOYSTICK_API_KEY }}
+          configId: "joystick-setup-dev1-minimum"
           # Specifying `secretJson` is optional, read `witcher` documentation for more info
           secretJson: ${{ secrets.API_TEST_SECRETS_JSON }}
