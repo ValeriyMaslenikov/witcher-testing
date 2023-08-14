@@ -1,0 +1,18 @@
+name: API test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+    name: API test
+    steps:
+      - name: Run Witcher API test
+        steps:
+          - name: Run Witcher API test
+            uses: getjoystick/witcher-action
+            with:
+              source: joystick
+              apiKey: ${{ secrets.API_TEST_JOYSTICK_API_KEY }}
+              configId: "root-config-id"
