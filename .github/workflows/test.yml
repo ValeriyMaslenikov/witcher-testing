@@ -9,8 +9,10 @@ jobs:
     name: API test
     steps:
       - name: Run Witcher API test
-        uses: getjoystick/witcher-action
+        uses: getjoystick/witcher-action@latest
         with:
           source: joystick
           apiKey: ${{ secrets.API_TEST_JOYSTICK_API_KEY }}
           configId: "root-config-id"
+          # Specifying `secretJson` is optional, read `witcher` documentation for more info
+          secretJson: ${{ secrets.API_TEST_SECRETS_JSON }}
