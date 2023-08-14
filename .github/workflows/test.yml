@@ -9,7 +9,7 @@ jobs:
     name: API test
     steps:
       - name: Run Witcher API test
-        uses: getjoystick/witcher-action@latest
+        uses: getjoystick/witcher-action@0.1.0
         with:
           source: joystick
           apiKey: ${{ secrets.API_TEST_JOYSTICK_API_KEY }}
